@@ -1,0 +1,119 @@
+{% extends 'jobapp/company/base.html'%}
+{% load static %}
+    {% block content %}
+                <section class="section">
+                    <div class="container" style="position: absolute;margin-top: 6em;margin-left: 13.5em;">
+                        {% if message %}
+                            <h3 style="color: rgb(19, 172, 19); text-align: center;">{{message}}</h3>
+                        {% endif %}
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="rounded shadow bg-white p-4" style="height: 41em;">
+                                    <div class="custom-form">
+                                        <h3>Job Details</h3>
+                                        <br>
+                                        <form method="post" action="{% url 'postajob' %}" name="contact-form" id="contact-form3">
+                                            {% csrf_token %}
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Job Title</label>
+                                                        <input id="company-name" name="jobtitle" type="text" class="form-control resume" style="width: 30em;height: 3em; border-radius: .7rem;" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Company Name</label>
+                                                        <input id="company-name" name="companyname" type="text" class="form-control resume" style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Company Email</label>
+                                                        <input id="company-name" name="email" type="email" class="form-control resume"style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Job Type</label>
+                                                        <input id="company-name" name="jobtype" type="text" class="form-control resume"style="width: 30em;height: 3em;border-radius: .7rem;"required="" placeholder="e.g Full time,Internship or Part-time ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Qualification</label>
+                                                        <input id="company-name" name="qualification" type="text" class="form-control resume" style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Description</label>
+                                                        <textarea id="company-name" name="jobdesc" type="text" class="form-control resume" style="width: 30em;height: 3em;border-radius: .7rem;"required=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Website</label>
+                                                        <input name="website" id="company-name" type="text" class="form-control resume" style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Salary</label>
+                                                        <input id="company-name" name="salary" type="tel" class="form-control resume" style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Experience(Years)</label>
+                                                        <input name="experience" id="company-name" type="tel" class="form-control resume" style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group app-label mt-2">
+                                                        <label class="text-muted">Responsibilities</label>
+                                                        <textarea id="company-name" name="responsibility" type="text" class="form-control resume"style="width: 30em;height: 3em;border-radius: .7rem;"required=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group app-label mt-2">
+                                                            <label class="text-muted">Requirments</label>
+                                                            <textarea id="company-name" name="requirments" type="text" class="form-control resume"style="width: 30em;height: 3em;border-radius: .7rem;"required=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group app-label mt-2">
+                                                            <label class="text-muted">Location</label>
+                                                            <input id="company-name" name="location" type="text" class="form-control resume"style="width: 30em;height: 3em;border-radius: .7rem;"required="">
+                                                        </div>
+                                                    </div>
+                                            </div>
+
+                <br>
+                                            <div class="row">
+                                                <div class="col-lg-12 mt-2">
+                                                    <button class="btn btn-primary">Post Job</button> 
+                                                </div>
+                                            </div>
+                                        
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    {% endblock %}

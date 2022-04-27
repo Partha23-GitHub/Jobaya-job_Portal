@@ -1,0 +1,57 @@
+   {% extends 'jobapp/company/base.html'%}
+   {% load static %} 
+    {% block content %}
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Posted Jobs </h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">My posted jobs</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Job Lists
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Job Name</th>
+                                            <th>Company Name</th>
+                                            <th>Location</th>
+                                            <th>Salary</th>
+                                            <th style="text-align: center;">Experience (Year)</th>
+                                            <th>Job Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Job Name</th>
+                                            <th>Company Name</th>
+                                            <th>Location</th>
+                                            <th>Salary</th>
+                                            <th style="text-align: center;">Experience (Year)</th>
+                                            <th>Job Description</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% for job in jobs %}
+                                        <tr>
+                                            <td>{{job.jobname}}</td>
+                                            <td>{{job.companyname}}</td>
+                                            <td>{{job.location}}</td>
+                                            <td>{{job.salary}}</td>
+                                            <td style="text-align: center;">{{job.experience}}</td>
+                                            <td>{{job.jobdesc}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        {% endblock %}
