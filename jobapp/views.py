@@ -200,7 +200,7 @@ def candidateJobList(request):
 
 #view job details
 def viewjobDetails(request,pk):
-    job=JobDetails.objects.get(userid=pk)
+    job=JobDetails.objects.get(id=pk)
     return render(request,'jobapp/job-details.html',{'job':job})
 
 # Logout System
