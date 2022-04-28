@@ -120,7 +120,7 @@
                             <img src="{% static 'images/featured-job/img-4.png' %}" alt="" class="img-fluid float-left mr-md-3 mr-2 mx-auto d-block">
                             <div class="job-detail-com-desc overflow-hidden d-block">
                                 <h4 class="mb-2"><a href="#" class="text-dark">{{job.jobname}}</a></h4>
-                                <p class="text-muted mb-0"><i class="mdi mdi-link-variant mr-2"></i>{{job.companyname}}</p>
+                                <p class="text-muted mb-0"><i class="mdi mdi-bank mr-2"></i>{{job.companyname}}</p>
                                 <p class="text-muted mb-0"><i class="mdi mdi-map-marker mr-2"></i>{{job.location}}</p>
                             </div>
                         </div>
@@ -204,42 +204,42 @@
                                 <div class="float-left mr-2">
                                     <i class="mdi mdi-bank text-muted"></i>
                                 </div>
-                                <p class="text-muted mb-2">: {{job.companyname}}</p>
+                                <p class="text-muted mb-2">{{job.companyname}}</p>
                             </div>
 
                             <div class="job-details-desc-item">
                                 <div class="float-left mr-2">
                                     <i class="mdi mdi-email text-muted"></i>
                                 </div>
-                                <p class="text-muted mb-2">: {{job.companyemail}}</p>
+                                <p class="text-muted mb-2">{{job.companyemail}}</p>
                             </div>
 
                             <div class="job-details-desc-item">
                                 <div class="float-left mr-2">
                                     <i class="mdi mdi-web text-muted"></i>
                                 </div>
-                                <p class="text-muted mb-2">: {{job.website}}</p>
+                                <p class="text-muted mb-2"> {{job.website}}</p>
                             </div>
 
                             <div class="job-details-desc-item">
                                 <div class="float-left mr-2">
                                     <i class="mdi mdi-currency-usd text-muted"></i>
                                 </div>
-                                <p class="text-muted mb-2">: {{job.salary}}</p>
+                                <p class="text-muted mb-2"> {{job.salary}}</p>
                             </div>
 
                             <div class="job-details-desc-item">
                                 <div class="float-left mr-2">
                                     <i class="mdi mdi-security text-muted"></i>
                                 </div>
-                                <p class="text-muted mb-2">: {{job.experience}} Years</p>
+                                <p class="text-muted mb-2"> {{job.experience}} Years</p>
                             </div>
 
                             <div class="job-details-desc-item">
                                 <div class="float-left mr-2">
                                     <i class="mdi mdi-clock-outline text-muted"></i>
                                 </div>
-                                <p class="text-muted mb-2">: 4 minutes ago</p>
+                                <p class="text-muted mb-2">{{job.lastdate}}</p>
                             </div>
                         </div>
                     </div>

@@ -180,10 +180,11 @@ def JobdetailsSubmit(request):
         experience=request.POST['experience']
         responsibilities=request.POST['responsibility']
         requirments=request.POST['requirments']
+        lastdate=request.POST['lastdate']
 
         newjob=JobDetails.objects.create(userid=id,jobname=jobname,jobtype=jobtype,companyname=companyname,companyemail=companyemail,
         location=location,qualification=qualification,jobdesc=jobdesc,website=website,salary=salary,
-        experience=experience,responsibilities=responsibilities,requirments=requirments)
+        experience=experience,responsibilities=responsibilities,requirments=requirments,lastdate=lastdate)
         return render(request,'jobapp/company/post-a-job.html',{'message':'You have successfully posted this job'})
 
 # display joblist posted by perticular HR

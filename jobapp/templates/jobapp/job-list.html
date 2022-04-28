@@ -158,6 +158,9 @@
                                                     <li class="list-inline-item">
                                                         <p class="text-muted mb-0"><i></i> &nbsp;&nbsp; &#8377;{{job.salary}}</p>
                                                     </li>
+                                                    <li class="list-inline-item">
+                                                        <p class="text-muted mb-0" style="margin-left: 2em;"><i class="mdi mdi-clock-outline mr-1"></i>{{job.lastdate}}</p>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -175,7 +178,7 @@
                             </div>
                         </div>
                         {% endfor %}
-                        
+                        {% if alljobs %}
                         <div class="col-lg-12 mt-4 pt-2">
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination job-pagination mb-0 justify-content-center">
@@ -196,6 +199,7 @@
                                 </ul>
                             </nav>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

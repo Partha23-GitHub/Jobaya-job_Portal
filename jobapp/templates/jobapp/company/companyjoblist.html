@@ -6,7 +6,7 @@
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Posted Jobs </h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'companyindex'%}">Dashboard</a></li>
                             <li class="breadcrumb-item active">My posted jobs</li>
                         </ol>
                         <div class="card mb-4">
@@ -20,20 +20,25 @@
                                         <tr>
                                             <th>Job Name</th>
                                             <th>Company Name</th>
+                                            <th>Job Type</th>
                                             <th>Location</th>
                                             <th>Salary</th>
                                             <th style="text-align: center;">Experience (Year)</th>
                                             <th>Job Description</th>
+                                            <th>Last Date</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Job Name</th>
                                             <th>Company Name</th>
+                                            <th>Job Type</th>
                                             <th>Location</th>
                                             <th>Salary</th>
                                             <th style="text-align: center;">Experience (Year)</th>
                                             <th>Job Description</th>
+                                            <th>Last Date</th>
+                                        </tr>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -41,10 +46,12 @@
                                         <tr>
                                             <td>{{job.jobname}}</td>
                                             <td>{{job.companyname}}</td>
+                                            <td>{{job.jobtype}}</td>
                                             <td>{{job.location}}</td>
                                             <td>{{job.salary}}</td>
                                             <td style="text-align: center;">{{job.experience}}</td>
                                             <td>{{job.jobdesc}}</td>
+                                            <td>{{job.lastdate}}</td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
