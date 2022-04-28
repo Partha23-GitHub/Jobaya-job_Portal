@@ -10,7 +10,7 @@ def candidateIndex(request):
 
 def companyIndex(request):
     id=request.session.get('id')
-    postedjobs=JobDetails.objects.filter(userid=id)
+    postedjobs=JobDetails.objects.filter(userid=id).order_by('lastdate')[:5]
     return render(request,'jobapp/company/index.html',{'jobs':postedjobs})
 
 #for sign Up
@@ -190,12 +190,12 @@ def JobdetailsSubmit(request):
 # display joblist posted by perticular HR
 def companyjoblist(request):
     id=request.session.get('id')
-    postedjobs=JobDetails.objects.filter(userid=id)
+    postedjobs=JobDetails.objects.filter(userid=id).order_by('lastdate')
     return render(request,'jobapp/company/companyjoblist.html',{'jobs':postedjobs})
 
 #display all jobs to candidate
 def candidateJobList(request):
-    alljobs=JobDetails.objects.all()
+    alljobs=JobDetails.objects.all().order_by('lastdate')
     return render(request,'jobapp/job-list.html',{'alljobs':alljobs})
 
 #view job details
