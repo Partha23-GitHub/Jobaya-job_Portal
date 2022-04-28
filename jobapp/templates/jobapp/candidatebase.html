@@ -103,12 +103,15 @@
                 <ul class="navigation-menu">
                     <li><a href="{% url 'candidateindex' %}">Home</a></li>
                     <li class="has-submenu">
-                        <a href="javascript:void(0)">Jobs</a><span class="menu-arrow"></span>
+                        <a href="{% url 'candidatejobs' %}">Jobs</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)">Resume </a><span class="menu-arrow"></span>
                         <ul class="submenu">
-                            <li><a href="{% url 'candidatejobs' %}">Job List</a></li>
+                            <li><a href="{% url 'candidateprofile' pk=request.session.id %}">Create & Edit</a></li>
+                            <li><a href="{% url 'candidatelogout' %}">View Resume</a></li>
                         </ul>
                     </li>
-    
                     
                     <li class="has-submenu">
                         <a href="javascript:void(0)">My Account </a><span class="menu-arrow"></span>

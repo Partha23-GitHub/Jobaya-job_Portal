@@ -186,15 +186,23 @@ def JobdetailsSubmit(request):
         experience=experience,responsibilities=responsibilities,requirments=requirments)
         return render(request,'jobapp/company/post-a-job.html',{'message':'You have successfully posted this job'})
 
+# display joblist posted by perticular HR
 def companyjoblist(request):
     id=request.session.get('id')
     postedjobs=JobDetails.objects.filter(userid=id)
     return render(request,'jobapp/company/companyjoblist.html',{'jobs':postedjobs})
 
+#display all jobs to candidate
 def candidateJobList(request):
     alljobs=JobDetails.objects.all()
     return render(request,'jobapp/job-list.html',{'alljobs':alljobs})
 
+#view job details
+def viewjobDetails(request,pk):
+    job=JobDetails.objects.get(userid=pk)
+    return render(request,'jobapp/job-details.html',{'job':job})
+
+# Logout System
 def companyLogout(request):
     del request.session['email']
     del request.session['password']

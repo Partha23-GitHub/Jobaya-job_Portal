@@ -147,7 +147,7 @@
                                                     </li>
 
                                                     <li class="list-inline-item">
-                                                        <p class="text-muted mb-0"><i class="mdi mdi-clock-outline mr-1"></i>{{job.experience}} Years</p>
+                                                        <p class="text-muted mb-0"><i></i>Experience :&nbsp;{{job.experience}} Years</p>
                                                     </li>
                                                 </ul>
                                                 <ul class="list-inline mb-0">
@@ -166,7 +166,7 @@
                                                 <span class="badge badge-success">{{job.jobtype}}</span>
 
                                                 <div class="mt-3">
-                                                    <a href="#" class="btn btn-sm btn-primary">Apply</a>
+                                                    <a href="{% url 'viewjob' pk=job.userid.id %}" class="btn btn-sm btn-primary" style="width: 6em;">View</a>
                                                 </div>
                                             </div>
                                         </div>

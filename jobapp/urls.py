@@ -16,6 +16,7 @@ urlpatterns = [
    path('candidateprofile/<int:pk>',views.CandidateProfileView,name='candidateprofile'),
    path('companylogout/',views.candidateLogout,name='candidatelogout'),
    path('alljobs/',views.candidateJobList,name='candidatejobs'),
+   path('viewjob/<int:pk>',views.viewjobDetails,name='viewjob'),
 
    ################# Company ##################
    path('company/',views.companyIndex,name='companyindex'),
